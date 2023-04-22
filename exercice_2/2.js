@@ -14,4 +14,18 @@
 	5! = 5 × 4 × 3 × 2 × 1 = 120
 */
 
-const factorial = n => { }
+const factorial = (n) => {
+  if (n < 0) {
+    return "Mathieu donne moi un nombre positif STP";
+  } else if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    let acc = n;
+    for (let i = 1; i < n; i++) {
+      acc = acc * (n - i);
+    }
+    return acc;
+  }
+};
+
+factorial(5);
